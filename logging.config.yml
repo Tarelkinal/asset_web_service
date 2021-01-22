@@ -1,0 +1,21 @@
+version: 1
+formatters:
+  default:
+    class: logging.Formatter
+    format: "%(asctime)s\t%(name)s\t%(levelname)s\t%(funcName)s\t%(message)s"
+handlers:
+  file_handler_all_levels:
+    class: logging.FileHandler
+    filename: asset_web_service.log
+    level: DEBUG
+    formatter: default
+  file_handler_errors:
+    class: logging.FileHandler
+    filename: asset_web_service.error
+    level: ERROR
+    formatter: default
+loggers:
+  asset_web_service:
+    level: DEBUG
+    handlers: [file_handler_all_levels, file_handler_errors]
+    propagate: no
