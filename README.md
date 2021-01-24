@@ -23,3 +23,6 @@ was successfully added”. If an attempt is made to add an asset with the name (
 - /api/asset/cleanup -- clear the list of assets. The request returns the return code-200.
 - Json API: /api/asset/get?name=name_1&name=name_2 -- return a list of all listed assets, each asset is represented as a list [“char_code”, “name”, “capital”, “interest”]. Sorting lists by default (that is, the main role in sorting is played by char_code).
 - Json API: /api/asset/calculate_revenue?period=period_1&period=period_2 -- calculate the estimated investment return for the specified time periods (return the dictionary {“period”: “revenue”}), where for currencies USD, EUR and precious metals make requests to the page “key-indicators”, and the rest from the “daily” page. (The accuracy of the comparison of fractional numbers is 10e-8.)
+
+## References
+The application was created as part of passing the course ["Software Development Best Practices in Python"](https://bigdatateam.org/python-course) from the Big Data team.
